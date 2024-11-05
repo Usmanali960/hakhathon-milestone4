@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Resume Builder</title>
 </head>
@@ -17,31 +18,51 @@
         <form>
             <fieldset>
                 <legend>Personal Information</legend>
-                <input type="text" name="text" id="name" placeholder="enter your name" required>
-                <input type="email" name="email" id="email" placeholder="enter your email" required>
+                <label for="file">Upload your Image</label>
+                <input contenteditable="true" type="file" name="file" id="img" placeholder="Upload you Image" required>
+                <input contenteditable="true" type="text" name="text" id="name" placeholder="enter your name" required>
+            </fieldset>
+            <fieldset>
+                <legend>About Me</legend>
+                <input contenteditable="true" type="text" placeholder="enter your about section" id="about" required>
+                <input contenteditable="true" type="text" name="Skills" id="skills" placeholder="enter your skills"
+                    required>
+                <input contenteditable="true" type="email" name="email" id="email" placeholder="enter your email"
+                    required>
+                <input contenteditable="true" type="number" id="number" placeholder="enter your number" name="number"
+                    required>
+                <input contenteditable="true" type="text" id="address" placeholder="enter your address" name="address"
+                    required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Work Experience</legend>
+                <input contenteditable="true" type="text" name="work" id="work"
+                    placeholder="enter your work expierience" required>
+            </fieldset>
+            <fieldset>
+                <legend>languages</legend>
+                <input contenteditable="true" type="text" id="langauges" placeholder="enter your langauges"
+                    name="langauges" required>
             </fieldset>
             <fieldset>
                 <legend>Education</legend>
-                <input type="text" name="Education" id="education" placeholder="enter your education level" required>
-            </fieldset>
-            <fieldset>
-                <legend>Work Experience</legend>
-                <input type="text" name="work" id="work" placeholder="enter your work expierience" required>
-            </fieldset>
-            <fieldset>
-                <legend>Skills</legend>
-                <input type="text" name="Skills" id="skills" placeholder="enter your skills" required>
+                <input contenteditable="true" type="text" placeholder="enter your Education" id="Education"
+                    name="Education" required>
             </fieldset>
             <input type="submit" id="submit" value="Generate">
         </form>
 
-        <div class="resume hide">
-            <h1>Resume</h1>
-            <div class="resumeContent">
-
+    </section>
+    <div class="finalResume hide">
+        <div class="resumeContent">
+            <div class="left">
+            </div>
+            <div class="right">
+                <button id="btn">Download</button>
             </div>
         </div>
-    </section>
+    </div>
 
     <script src="script.js"></script>
 </body>

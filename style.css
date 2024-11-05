@@ -9,17 +9,19 @@ body {
     height: 100%;
     box-sizing: border-box;
     background-color: aliceblue;
+    overflow-x: hidden;
 }
 
 .formSection {
-    margin: auto;
-    background-color: #3498db;
+    margin: 10vh auto;
+    background-color: #444D5E;
     display: flex;
     padding: 2vw 6vw;
     justify-content: center;
     flex-direction: column;
-    margin: 6vh 20vw;
     border-radius: 1vw;
+    border: 2px solid black;
+    width: 30%;
 }
 
 .heading {
@@ -36,26 +38,37 @@ form {
 
 fieldset {
     width: 100%;
-    max-height: 20vh;
+
+    max-height: 100vh;
     padding: 0.5vw 1vw;
-    margin-top: 1vw;
+    margin: 1vw 0;
+    border-radius: 5px;
 }
 
 legend {
     font-size: 1.5vw;
+    color: white;
+    padding: 0 3px;
+}
+
+label {
+    color: #fff;
+    font-size: 18px;
 }
 
 input {
     width: 90%;
+    font-size: 17px;
     padding: 0.8vw 1vw;
     outline: none;
     border-radius: 1vw;
     border: 2px solid black;
     margin-top: 0.5vw;
+    background-color: #fff;
 }
 
 input::placeholder {
-    color: black;
+    color: gray;
 }
 
 #submit {
@@ -71,44 +84,82 @@ input::placeholder {
     opacity: 0.8;
 }
 
-/* resume card styling */
-
-.resume {
-    background-color: lightgrey;
-    color: black;
-    margin-top: 2vw;
-    border-radius: 1vw;
-    padding: 0.8vw 2vw;
+.resumeContent {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10vw;
+}
+
+.left {
+    background-color: #444D5E;
+    width: 20vw;
+    height: 100vh;
+    color: #fff;
+    padding: 1vw 2vw;
+}
+
+.right {
+    background-color: #fff;
+    width: 40vw;
+    height: 100vh;
+    color: #000;
+    padding: 1vw 2vw;
+}
+
+#rName {
+    font-size: 16px;
 }
 
 .hide {
     display: none;
 }
 
-.resume h1 {
-    text-align: center;
+.left img {
+    border-radius: 50%;
+    margin-left: 50px;
 }
 
-.resume p {
-    max-width: max-content;
+.left h3 {
+    margin: 1vw 0;
+}
+
+.left h4 {
+    margin: 1vw 0;
+}
+
+.left .contactDetails {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5vw;
+    gap: 1vw;
+}
+
+.right h4 {
+    background-color: #FEEECA;
+    color: #676677;
     padding: 0.3vw 0.5vw;
-    font-size: 1.5vw;
-    margin-top: 1vw;
+    margin: 2vw;
 }
 
-.resume span {
-    border: 1px dashed black;
-    outline: none;
-    padding: 0.2vw 0.2vw;
-    margin-left: 0.5vw;
+.right p {
+    margin: 2vw;
 }
 
-.resumeContent {
-    margin-top: 1vw;
+.right button {
+    margin: 2vw;
+    background-color: rgb(101, 101, 168);
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    padding: 1vw 2vw;
+    font-size: 18px;
 }
 
+.right button:hover {
+    background-color: rgb(38, 38, 193);
+}
 
 /* media queries for form responsi*/
 @media (max-width:900px) {
@@ -132,7 +183,7 @@ input::placeholder {
         font-size: 3vw;
     }
 
-    .resume{
+    .resume {
         margin-left: -15px;
     }
 
@@ -146,7 +197,37 @@ input::placeholder {
 }
 
 @media (max-width:500px) {
-    .formSection{
-        padding: 2vw 10vw;
+    body {
+        overflow-x: scroll;
     }
+
+    .formSection {
+        padding: 2vw 10vw;
+        margin: 5vh auto;
+        width: 60vw;
+    }
+
+    form input {
+        font-size: 10px;
+        margin: 2.5px 0;
+    }
+
+    form input::placeholder {
+        font-size: 10px;
+        margin: 2.5px 0;
+    }
+
+    .resumeContent .left {
+        width: 30vw;
+        padding: 1vw 2vw;
+    }
+
+    .left img {
+        margin-left: 20px;
+    }
+
+    .right {
+        width: 40vw;
+    }
+
 }
